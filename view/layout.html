@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>重拾css布局</title>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+<body>
+	<div id="main" class="elem">
+		<span class="label">&lt;div id="main"&gt;</span>
+		<p>在这种情况下使用 <code>max-width</code> 替代 <code>width</code> 可以使浏览器更好地处理小窗口的情况。这点在移动设备上显得尤为重要，调整下浏览器窗口大小检查下吧!</p>
+		<p>顺便提下，所有的主流浏览器包括IE7+在内都支持 <code>max-width</code> ，所以放心大胆的用吧。</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="simple elem border-box">
+		<span class="label">&lt;div class="simple"&gt;</span>
+		<p>这是小的容器</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="fancy elem border-box">
+		<span class="label">&lt;div class="simple"&gt;</span>
+		<p>这是大的容器</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="elem bottom">
+		<span class="label">&lt;div class="static"&gt;</span>
+		<p>
+			static 是默认值。任意 position: static; 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置为其他值的元素表示它会被“positioned”。
+		</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="elem relative1">
+		<span class="label">&lt;div class="relative1"&gt;</span>
+		<p>
+			<code>relative</code> 表现的和 <code>static</code> 一样，除非你添加了一些额外的元素
+		</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="elem-red relative2">
+		<span class="label-red">&lt;div class="relative2"&gt;</span>
+		<p>
+			在一个相对定位（position属性的值为relative）的元素上设置 <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。
+		</p>
+		<span class="endlabel-red">&lt;/div&gt;</span>
+	</div>
+	<!-- <div class="elem-yellow fixed">
+		<span class="label-yellow">&lt;div class="fixed"&gt;</span>
+		<p>
+			Hello！暂时不要太关注我哦。
+		</p>
+		<span class="endlabel-yellow">&lt;/div&gt;</span>
+	</div> -->
+	<div class="elem relative bottom">
+		<span class="label">&lt;div class="relative"&gt;</span>
+		<p>
+			这个元素是相对定位的。如果它是 <code>position: static;</code> ，那么它的绝对定位子元素会跳过它直接相对于body元素定位。
+		</p>
+		<div class="elem-red absolute">
+			<span class="label-red">&lt;div class="absolute"&gt;</span>
+			<p>
+				这个元素是绝对定位的。它相对于它的父元素定位。
+			</p>
+			<span class="endlabel-red">&lt;/div&gt;</span>
+		</div>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="elem container bottom">
+		<span class="label">&lt;div class="container"&gt;</span>
+		<nav class="elem-red">
+			<span class="label-red">&lt;nav&gt;</span>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Taco Menu</a></li>
+				<li><a href="#">Draft List</a></li>
+				<li><a href="#">Hours</a></li>
+				<li><a href="#">Directions</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<span class="endlabel-red">&lt;/nav&gt;</span>
+		</nav>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				<code>section</code> 的 <code>margin-left</code> 样式确保了有足够的空间容纳 nav 元素。
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				<code>section</code> 的 <code>margin-left</code> 注意观察当你调整浏览器窗口时发生了什么。效果很赞！
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<footer class="elem-green">
+			<span class="label-green">&lt;footer&gt;</span>
+			<p>
+				如果你使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 <code>body</code> 上面加了 <code>margin-bottom</code> 。
+			</p>
+			<span class="endlabel-green">&lt;/footer&gt;</span>
+		</footer>
+	</div>
+	<p class="content ipsum bottom"><img src="../imgs/ilta.png" alt="an img"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+	<div class=" elem-green box">
+		<span class="label-green">&lt;div class="box"&gt;</span>
+		<p>我感觉我好像在漂浮!</p>
+		<span class="endlabel-green">&lt;/div&gt;</span>
+	</div>
+	<section class="elem-yellow bottom">
+		<span class="label-yellow">&lt;section&gt;</span>
+		<p>在这个例子中， <code>section</code> 元素实际上是在 <code>div</code> 之后的（译注：DOM结构上）。然而 <code>div</code> 元素是浮动到左边的，于是 <code>section</code> 中的文字就围绕了 <code>div</code> ，并且 <code>section</code> 元素包围了整个元素。如果我们想让 <code>section</code> 显示在浮动元素之后呢？</p>
+		<span class="endlabel-yellow">&lt;/section&gt;</span>
+	</section>
+	<div class=" elem-green box">
+		<span class="label-green">&lt;div class="box"&gt;</span>
+		<p>我感觉我好像在漂浮!</p>
+		<span class="endlabel-green">&lt;/div&gt;</span>
+	</div>
+	<section class="elem-yellow after-box bottom">
+		<span class="label-yellow">&lt;section&gt;</span>
+		<p>在这个例子中， <code>section</code> 元素实际上是在 <code>div</code> 之后的（译注：DOM结构上）。然而 <code>div</code> 元素是浮动到左边的，于是 <code>section</code> 中的文字就围绕了 <code>div</code> ，并且 <code>section</code> 元素包围了整个元素。如果我们想让 <code>section</code> 显示在浮动元素之后呢？</p>
+		<span class="endlabel-yellow">&lt;/section&gt;</span>
+	</section>
+	<div class="elem-green content">
+		<span class="label-green">&lt;div&gt;</span>
+		<img src="../imgs/ilta.png" alt="an img">
+		<p>不......这个图片比包含它的元素还高， 而且它是浮动的，于是它就溢出到了容器外面！</p>
+	</div>
+	<p class="content clear" style="text-align: center;">清除浮动（clearfix hack）</p>
+	<div class="elem-green content">
+		<div class="clearfix">
+			<span class="label-green">&lt;div class="clearfix"&gt;</span>
+			<img src="../imgs/ilta.png" alt="an img">
+			<p>好多了！</p>
+		</div>
+	</div>
+	<p class="content clear" style="text-align: center;">完全使用 <code>float</code> 来实现页面的布局是很常见的。这里有一个我之前用 <code>position</code> 实现的布局例子，这次我使用 <code>float</code> 实现它。</p>
+	<div class="elem clearfix bottom">
+		<span class="label">&lt;div class="container"&gt;</span>
+		<nav class="elem elem-red">
+			<span class="label-red">&lt;nav&gt;</span>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Taco Menu</a></li>
+				<li><a href="#">Draft List</a></li>
+				<li><a href="#">Hours</a></li>
+				<li><a href="#">Directions</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<span class="endlabel-red">&lt;/nav&gt;</span>
+		</nav>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				<code>section</code> 的 <code>margin-left</code> 样式确保了有足够的空间容纳 nav 元素。
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>
+				<code>section</code> 的 <code>margin-left</code> 注意观察当你调整浏览器窗口时发生了什么。效果很赞！
+			</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+	</div>
+	<div class="elem content three-column bottom">
+		<span class="label">&lt;div class="three-column"&gt;</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+	<div class="elem container-flex bottom">
+		<section class="elem-yellow initial">
+			<span class="label-yellow">&lt;section class="initial"&gt;</span>
+			<p>空间足够的时候，我的宽度是200px，如果空间不足，我会变窄到100px，但不会再窄了。</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow none">
+			<span class="label-yellow">&lt;section class="none"&gt;</span>
+			<p>无论窗口如何变化，我的宽度一直是200px。</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow flex1">
+			<span class="label-yellow">&lt;section class="flex1"&gt;</span>
+			<p>我会占满剩余宽度的1/3。</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<section class="elem-yellow flex2">
+			<span class="label-yellow">&lt;section class="flex2"&gt;</span>
+			<p>我会占满剩余宽度的2/3。</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+	</div>
+	<div class="vertical-container elem">
+		<span class="label">&lt;div class="vertical-container"&gt;</span>
+		<section class="elem-yellow">
+			<span class="label-yellow">&lt;section&gt;</span>
+			<p>CSS里总算是有了一种简单的垂直居中布局的方法了！</p>
+			<span class="endlabel-yellow">&lt;/section&gt;</span>
+		</section>
+		<span class="endlabel">&lt;/div&gt;</span>
+	</div>
+</body>
+</html>

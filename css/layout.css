@@ -1,0 +1,249 @@
+*{
+	box-sizing: border-box;
+}
+#main{
+	max-width: 600px;
+  	margin: 0 auto;
+  	
+}
+.elem{
+	border: 3px solid #6AC5AC;
+  	position: relative;
+}
+.elem-red{
+	border: 3px solid #D64078;
+	position: relative;
+}
+.elem-yellow{
+	border: 3px solid #FDC72F;
+	position: relative;
+}
+.elem-green{
+	border:3px solid #96C02E;
+	position: relative;
+}
+.elem p, .elem-red p, .elem-yellow p, .elem-green p{
+	padding: 0 1em;
+}
+p code,li code {
+	background-color: #ECECEC;
+}
+p{
+	margin: 1em 0;
+}
+.label, .endlabel{
+	position: absolute;
+    background-color: #6AC5AC;
+    color: #414142;
+    line-height: 1em;
+}
+.label-red, .endlabel-red{
+	position: absolute;
+    background-color: #D64078;
+    color: #414142;
+    line-height: 1em;
+}
+.label-yellow, .endlabel-yellow{
+	position: absolute;
+    background-color: #FDC72F;
+    color: #414142;
+    line-height: 1em;
+}
+.label-green, .endlabel-green{
+	position: absolute;
+	background-color: #96C02E;
+	color: #414142;
+	line-height: 1em;
+}
+.label, .label-red, .label-yellow, .label-green{
+	top: 0;
+    left: 0;
+    padding: 0 3px 3px 0;
+}
+.endlabel, .endlabel-red, .endlabel-yellow, .endlabel-green{
+	right: 0px;
+	bottom: 0px;
+	padding: 0 3px 3px 0;
+}
+.simple{
+	max-width: 500px;
+	margin: 20px auto;
+}
+.fancy{
+	max-width: 500px;
+	margin: 20px auto;
+	padding: 50px;
+	border-width: 10px; 
+}
+.border-box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.bottom{
+	margin-bottom: 60px;
+}
+.relative1{
+	position: relative;
+}
+.relative2{
+	position: relative;
+	top: -20px;
+  	left: 20px;
+  	background-color: white;
+  	width: 500px;
+}
+.fixed{
+	position: fixed;
+  	top: 0;
+  	right: 0;
+  	width: 200px;
+  	background-color: white;
+}
+.relative{
+	position: relative;
+  	width: 600px;
+  	height: 400px;
+}
+.absolute{
+	position: absolute;
+  	top: 120px;
+  	right: 0;
+  	width: 300px;
+  	height: 200px;
+}
+.container{
+	position: relative;
+	padding: 0px;
+}
+.container nav.elem-red{
+	position: absolute;
+	left: 0px;
+	width: 200px;
+}
+ul{
+	display: block;
+	list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+a:visited {
+    color: #D64078;
+}	
+a:link {
+    color: #D64078;
+    text-decoration: none;
+}
+.container section{
+	margin-left: 200px;
+}
+footer.elem-green{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 90px;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+}
+footer{
+	text-align: center;
+	opacity:0;
+}
+.ipsum{
+	color: #734161;
+    background-color: #eee;
+}
+.content{
+	width: 600px;
+	margin: 1em auto;
+}
+.content img{
+	float: right;
+}
+.box{
+	float: left;
+  	width: 200px;
+  	height: 100px;
+  	margin: 1em;
+}
+.after-box{
+	clear: left;
+}
+.clear{
+	clear: both;
+}
+.content .clearfix{
+	overflow: auto;
+	zoom: 1; 
+}
+.elem .clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+@media screen and (min-width: 600px){
+	.clearfix nav{
+		float: left;
+    	width: 25%;
+	}
+	.clearfix section{
+		margin-left: 25%;
+	}
+}
+@media screen and (max-width: 599px){
+	nav li{
+		display: inline;
+	}
+}
+.three-column{
+	 padding: 1em;
+  	-moz-column-count: 3;
+  	-moz-column-gap: 1em;
+  	-webkit-column-count: 3;
+  	-webkit-column-gap: 1em;
+  	column-count: 3;
+  	column-gap: 1em;
+}
+.container-flex{
+	display: -webkit-flex;
+    display: flex;
+}
+.initial{
+	-webkit-flex: initial;
+    flex: initial;
+  	width: 200px;
+  	min-width: 100px;
+}
+.none{
+	-webkit-flex: none;
+    flex: none;
+  	width: 200px;
+}
+.flex1 {
+  	-webkit-flex: 1;
+    flex: 1;
+}
+.flex2 {
+  	-webkit-flex: 2;
+    flex: 2;
+}
+.vertical-container {
+  	height: 300px;
+  	display: -webkit-flex;
+  	display: flex;
+  	-webkit-align-items: center;
+  	align-items: center;
+  	-webkit-justify-content: center;
+  	justify-content: center;
+}
